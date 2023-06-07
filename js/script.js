@@ -14,6 +14,6 @@ function validateform(){
     document.getElementById("sender-birth-date").innerText= date;
     document.getElementById("sender-gender").innerText=gender;
     document.getElementById("sender-messages").innerText=messages;
-    console.log();
+    
     return false;
   }
