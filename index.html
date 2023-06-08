@@ -4,9 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title img src="/pull/assets/logo.jpeg">Company Profile</title>
+    <link rel="stylesheet" href="/pull/css/style.css">
 </head>
 <body>
-    <p>ll</p>
+    <header class="header">
+        <img class="logo"  src="/pull/assets/logo.jpeg" alt="revou logo">
+            <div class="header">
+                <button>Home</button>
+                <button>Our Profile</button>
+                <button>Portofolio</button>
+                <button>Message Us</button>
+            </div>
+    </header>
+    <div>
+        <div>
+            <h1>Hi Isna, welcome to my company</h1>
+            <p>PT.Isna Indah Perkasa adalah perusahaan main kontraktor gedung bertingkat</p>
+        </div>
+    <div>
+        <div><img class="img-slideshow" src="/pull/assets/background.jpeg"></div>
+        <div><img class="img-slideshow" src="/pull/assets/bg 1.jpg" width="1300" height="578"></div>
+        <div><img class="img-slideshow" src="/pull/assets/bg 2.jpg" width="1300" height="578"></div>
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
+    </div>
+    <script>
+            var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs((slideIndex +=n));
+}
+
+function showDivs(n) {
+  var i;
+  var x; document.getElementsByClassName("img-slideshow");
+  if (n > x.length) {
+    slideIndex = 1;
+  }
+  if (n < 1){
+    slideIndex = x.length
+  }
+
+  for (i = 0; i < x.length; i++) {
+    x[1].style.display = "none"
+  }
+  x[slideIndex - 1].style.display = "block"
+}
+        </script>
+    </div>
+    <div>
+        <h1>Out Headquarter</h1>
+            <table class="avatar2" cellpading="10" cellspacing="0">
+                <tr>
+                <td><img src="/pull/assets/logo.jpeg" alt="avatar" class="avatar"></td>
+                <td><img src="/pull/assets/logo.jpeg" alt="avatar" class="avatar"></td>
+                <td><img src="/pull/assets/logo.jpeg" alt="avatar" class="avatar"></td>
+                </tr>
+                <tr>
+                    <td>Jakarta</td>
+                    <td>Bandung</td>
+                    <td>Surabaya</td>
+                </tr>
+            </table>
+  
+    </div>
+        <h1>Message Us</h1>
+    <div style="flex-direction: row; display: flex;;">
+        <form name="message-form" onsubmit="return validateform()">
+            Nama : <input placeholder="nama" type="text" name="full-name"/>
+            <br/>
+            Tanggal Lahir : <input type="date" name="birth-date"/>
+            <br/>
+            Jenis Kelamin : 
+            <input type="radio" id="male" name="gender" value="Laki-Laki"/>
+            <label for="male">Laki-Laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan"/>
+            <label for="female">Perempuan</label>
+            <br/>
+            Pesan :
+            <textarea placeholder="pesan" name="messages">
+            </textarea>
+            <br/>
+            <input type="submit" value="Submit"/>
+        </form>
+        <script src="/pull/js/script.js"></script>
+        <div class="output">
+            <p>Nama : <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+            <p>Pesan : <span id="sender-messages"></span></p>
+        </div>
+    </div>
+    <footer>
+       <div>
+        <p class="text1">Copyright@isnaagungw</p>
+    </div>
+    </footer>
 </body>
 </html>
